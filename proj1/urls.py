@@ -20,3 +20,15 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
 ]
+"""
+]
+
+from rest_framework.authtoken import views
+ from .views import LectureCreateView
+ urlpatterns = [
+    ...
+    url(r'^api/user_auth/$', views.obtain_auth_token),
+    url(r'^api/lecture/create/$', LectureCreateView.as_view()),
+ ]
+ 
+ """
